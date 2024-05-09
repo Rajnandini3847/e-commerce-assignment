@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Linear gradient background */
 }
 
 header {
@@ -14,22 +15,39 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 
 #cart {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+#cart:hover {
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 #cart-count {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: -5px;
     background-color: red;
     color: #fff;
     border-radius: 50%;
     padding: 5px 10px;
+    font-size: 12px; /* Adjust font size */
+    animation: pulse 1s infinite alternate; /* Add pulsating animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 #main-content {
@@ -43,32 +61,43 @@ header {
     width: 300px;
     margin-bottom: 30px;
     padding: 20px;
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded corners */
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Move up on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Darken shadow on hover */
 }
 
 .product img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded corners */
 }
 
 .product h2 {
     margin-top: 10px;
+    color: #333; /* Darken text color */
 }
 
 .product p {
     margin-top: 5px;
+    color: #666; /* Darken text color */
 }
 
 button {
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px; /* Rounded corners */
     padding: 10px 20px;
     margin-top: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Add smooth transition */
 }
 
 button:hover {
@@ -94,7 +123,8 @@ button:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
 }
 
 .close {
